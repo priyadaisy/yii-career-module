@@ -27,11 +27,11 @@ class JobApplicationController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
+			array('allow',  // allow all users to perform 'index', 'create' and 'view' actions
 				'actions'=>array('index','view', 'create'),
 				'users'=>array('*'),
 			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+			array('allow', // allow authenticated user to perform 'update' actions
 				'actions'=>array('update'),
 				'users'=>array('@'),
 			),

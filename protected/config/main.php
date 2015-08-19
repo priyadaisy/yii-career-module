@@ -57,14 +57,12 @@ return array(
 		'clientScript'=>array(
         	// 'coreScriptPosition'=>CClientScript::POS_END,
 	        'scriptMap'=>array(
-
-				'ckeditor.js'=>'//cdn.ckeditor.com/4.5.2/basic/ckeditor.js',
-
-	             'jquery.js'=>'//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
-	             'jquery-ui.min.js'=>'//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js',
-	             'jquery-ui.css'=>'//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css',
-	             'bootstrap.min.js'=>'//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js',
-	        ),
+                    'ckeditor.js' => '//cdn.ckeditor.com/4.5.2/basic/ckeditor.js',
+                    'jquery.js' => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
+                    'jquery-ui.min.js' => '//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js',
+                    'jquery-ui.css' => '//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css',
+                    'bootstrap.min.js' => '//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js',
+            ),
     	),
 
 		'user'=>array(
