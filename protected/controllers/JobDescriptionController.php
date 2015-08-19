@@ -71,7 +71,7 @@ class JobDescriptionController extends Controller {
             } elseif (isset($_POST['publish'])) {
                 $model->setAttribute("status", 1);
             }
-            $model->setAttribute("update_on", time());
+            $model->setAttribute("update_on", date('Y-m-d H:i:s'));
 
             if ($model->save())
                 $this->redirect(array('view', 'id' => $model->id));
@@ -101,7 +101,7 @@ class JobDescriptionController extends Controller {
                 $model->setAttribute("status", 1);
             }
 
-            $model->setAttribute("update_on", time());
+            $model->setAttribute("update_on", date('Y-m-d H:i:s'));
 
             if ($model->save())
                 $this->redirect(array('view', 'id' => $model->id));
@@ -134,7 +134,8 @@ class JobDescriptionController extends Controller {
         $criteria->addCondition("job_id=:job_id");
         $criteria->params = array(':job_id' => $id);
         $applications = JobApplication::model()->findAll($criteria);
-        
+        $applications = new CArrayDataProvider($applications);
+
         $this->render('view_applications', array(
             'model' => $this->loadModel($id),
             'applications' => $applications,

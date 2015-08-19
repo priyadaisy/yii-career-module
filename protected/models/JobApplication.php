@@ -59,7 +59,7 @@ class JobApplication extends CActiveRecord {
     public function attributeLabels() {
         return array(
             'id' => 'ID',
-            'job_id' => 'Job',
+            'job_id' => 'Job Id',
             'name' => 'Name',
             'email' => 'Email',
             'mobile' => 'Mobile',

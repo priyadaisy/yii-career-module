@@ -17,7 +17,7 @@ $this->menu=array(
 ?>
 
 <h1>View JobDescription #<?php echo $model->id; ?></h1>
-<?php echo CHtml::link('Apply', array('jobapplication/create', 'job_id'=>$model->id)); ?>
+<?php echo CHtml::link('Apply', array('jobApplication/create', 'job_id'=>$model->id)); ?>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -28,6 +28,9 @@ $this->menu=array(
 		'job_category',
 		'job_description_details',
 		'status',
-		'update_on',
+                array(
+                    'name'=>'update_on',
+                    'value'=>date("D j F Y h:i A", strtotime($model->update_on))
+                ),
 	),
 )); ?>

@@ -50,8 +50,8 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'job_kind',
             array(
             'name'=>'update_on',
-            'value'=>'date("D j F Y h:i A", $data->update_on)'
-        ),
+            'value'=>'date("D j F Y h:i A", strtotime($data->update_on))'
+            ),
 //		'update_on',
 //		'job_category',
 //		'job_description_details',

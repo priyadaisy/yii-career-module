@@ -33,30 +33,27 @@ $this->menu=array(
 )); ?>
 
 
-
-
-
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'job-application-grid',
+	'id'=>'job-applications-grid',
 	'dataProvider'=>$applications,
-	'filter'=>$applications,
+//	'filter'=>$applications,
 	'columns'=>array(
-		'id',
-		'job_id',
+//		'id',
+//		'job_id',
 		'name',
 		'email',
 		'mobile',
+		'status',
 		'url_github',
 		/*
 		'url_behance',
 		'description',
 		'resume_path',
 		'remark',
-		'status',
 		'applied_on',
 		*/
-		array(
-			'class'=>'CButtonColumn',
-		),
+//		array(
+//			'class'=>'CButtonColumn',
+//		),
 	),
 )); ?>

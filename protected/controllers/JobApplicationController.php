@@ -71,7 +71,7 @@ class JobApplicationController extends Controller
 		{
 			$model->attributes=$_POST['JobApplication'];
                         $model->setAttribute("status", 1);
-                        $model->setAttribute("applied_on", time());
+                        $model->setAttribute("applied_on", date('Y-m-d H:i:s'));
                         if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}

@@ -32,6 +32,9 @@ $this->menu=array(
 		'resume_path',
 		'remark',
 		'status',
-		'applied_on',
+                array(
+                    'name'=>'applied_on',
+                    'value'=>date("D j F Y h:i A", strtotime($model->applied_on))
+                ),
 	),
 )); ?>

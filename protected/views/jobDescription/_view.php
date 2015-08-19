@@ -18,7 +18,7 @@
     <br />
 
     <b><?php echo CHtml::encode($data->getAttributeLabel('update_on')); ?>:</b>
-    <?php echo CHtml::encode(date("D j F Y h:i A", $data->update_on)); ?>
+    <?php echo CHtml::encode(date("D j F Y h:i A", strtotime($data->update_on))); ?>
     <br />
     
     <?php echo CHtml::link('view', array('view', 'id'=>$data->id)); ?>
