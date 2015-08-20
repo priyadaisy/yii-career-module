@@ -45,12 +45,15 @@ $this->menu=array(
 		'mobile',
 		'status',
 		'url_github',
+                array(
+                    'name'=>'applied_on',
+                    'value'=>'date("D j F Y h:i A", strtotime($data->applied_on))'
+                ),
 		/*
 		'url_behance',
 		'description',
 		'resume_path',
 		'remark',
-		'applied_on',
 		*/
 //		array(
 //			'class'=>'CButtonColumn',

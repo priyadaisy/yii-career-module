@@ -58,9 +58,9 @@
     </script>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Publish', array('name' => 'publish')); ?>
-        <?php echo CHtml::submitButton('Save As Draft', array('name' => 'save-draft')); ?>
-        <?php echo CHtml::Button('Cancel Edit'); ?>
+            <?php echo CHtml::submitButton('Publish', array('name' => 'publish')); ?>
+            <?php echo CHtml::submitButton('Save As Draft', array('name' => 'save-draft')); ?>
+            <?php echo CHtml::Button('Cancel Edit'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

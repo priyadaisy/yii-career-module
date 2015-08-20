@@ -10,6 +10,7 @@
  * @property string $job_category
  * @property string $job_description_details
  * @property integer $status
+ * @property string $created_on
  * @property string $update_on
  */
 class JobDescription extends CActiveRecord
@@ -36,7 +37,7 @@ class JobDescription extends CActiveRecord
 			array('job_category', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, job_title, job_kind, job_category, job_description_details, status, update_on', 'safe', 'on'=>'search'),
+			array('id, job_title, job_kind, job_category, job_description_details, status, created_on, update_on', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,6 +65,8 @@ class JobDescription extends CActiveRecord
 			'job_description_details' => 'Job Description Details',
 			'status' => 'Status',
 			'update_on' => 'Update On',
+                        'created_on' => 'Created On',
+
 		);
 	}
 
@@ -91,6 +94,7 @@ class JobDescription extends CActiveRecord
 		$criteria->compare('job_category',$this->job_category,true);
 		$criteria->compare('job_description_details',$this->job_description_details,true);
 		$criteria->compare('status',$this->status);
+                $criteria->compare('created_on',$this->created_on,true);
 		$criteria->compare('update_on',$this->update_on,true);
 
 		return new CActiveDataProvider($this, array(
