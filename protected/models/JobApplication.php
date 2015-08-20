@@ -9,6 +9,7 @@
  * @property string $name
  * @property string $email
  * @property integer $mobile
+ * @property string $url_resume
  * @property string $url_github
  * @property string $url_behance
  * @property string $description
@@ -33,14 +34,27 @@ class JobApplication extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('job_id, name, email, mobile, description, resume_path', 'required'),
+            array('job_id, name, email, mobile, description', 'required'),
+            array('email', 'email'),
             array('mobile', 'numerical', 'integerOnly' => true),
             array('name, email', 'length', 'max' => 50),
-            array('url_github, url_behance, resume_path', 'length', 'max' => 100),
+            array('url_github, url_behance', 'length', 'max' => 100),
+            array('resume_path', 'file', 'allowEmpty'=>true, 'types'=>'doc, docx, pdf', 'maxSize'=>'2097152', 'safe' => false),
+            array('url_resume', 'validateURL'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('id, job_id, name, email, mobile, url_github, url_behance, description, resume_path, remark, status, applied_on', 'safe', 'on' => 'search'),
+            array('id, job_id, name, email, mobile, url_resume, url_github, url_behance, description, resume_path, remark, status, applied_on', 'safe', 'on' => 'search'),
         );
+    }
+    
+    /**
+     * custom validation rule for the resume.
+     */
+    public function validateURL($attribute, $params) {
+        if(is_null($this->resume_path) && empty($this->url_resume)) {
+            $this->addError('url_resume', 'You can either Provide your Resume on Dropbox or Google Drive or you can upload your resume. Now both seems to be empty.');
+            $this->addError('resume_path', 'You can either Provide your Resume on Dropbox or Google Drive or you can upload your resume. Now both seems to be empty.');
+        }
     }
 
     /**
@@ -63,10 +77,11 @@ class JobApplication extends CActiveRecord {
             'name' => 'Name',
             'email' => 'Email',
             'mobile' => 'Mobile',
-            'url_github' => 'Url Github',
-            'url_behance' => 'Url Behance',
+            'url_resume' => 'Resume URL',
+            'url_github' => 'Github URL',
+            'url_behance' => 'Behance URL',
             'description' => 'Description',
-            'resume_path' => 'Resume Path',
+            'resume_path' => 'Upload Your Resume',
             'remark' => 'Remark',
             'status' => 'Status',
             'applied_on' => 'Applied On',
@@ -95,6 +110,7 @@ class JobApplication extends CActiveRecord {
         $criteria->compare('name', $this->name, true);
         $criteria->compare('email', $this->email, true);
         $criteria->compare('mobile', $this->mobile);
+        $criteria->compare('url_resume', $this->url_resume, true);
         $criteria->compare('url_github', $this->url_github, true);
         $criteria->compare('url_behance', $this->url_behance, true);
         $criteria->compare('description', $this->description, true);

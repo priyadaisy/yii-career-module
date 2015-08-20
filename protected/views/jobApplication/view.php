@@ -26,6 +26,7 @@ $this->menu=array(
 		'name',
 		'email',
 		'mobile',
+                'url_resume',
 		'url_github',
 		'url_behance',
 		'description',

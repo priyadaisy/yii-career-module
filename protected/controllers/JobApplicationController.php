@@ -63,21 +63,27 @@ class JobApplicationController extends Controller
 	public function actionCreate($job_id)
 	{
 		$model=new JobApplication;
-
+                $job_description_model = JobDescription::model()->findByPk($job_id);
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['JobApplication']))
 		{
 			$model->attributes=$_POST['JobApplication'];
-                        $model->setAttribute("status", 1);
-                        $model->setAttribute("applied_on", date('Y-m-d H:i:s'));
-                        if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+                        $model->resume_path=CUploadedFile::getInstance($model,'resume_path');
+                        $model->status = 1;
+                        $model->applied_on = new CDbExpression("NOW()");
+                        
+                        if($model->save()) {
+                            if(!is_null($model->resume_path))
+                                $model->resume_path->saveAs(Yii::app()->basePath.'/../user_uploads/'.$model->id.'.'.$model->resume_path->getExtensionName());
+                            $this->redirect(array('view','id'=>$model->id));
+                        }
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
+                        'job_description_model' => $job_description_model,
                         'job_id'=>$job_id
 		));
 	}
