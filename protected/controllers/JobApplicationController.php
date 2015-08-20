@@ -65,7 +65,7 @@ class JobApplicationController extends Controller
 		$model=new JobApplication;
                 $job_description_model = JobDescription::model()->findByPk($job_id);
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		 $this->performAjaxValidation($model);
 
 		if(isset($_POST['JobApplication']))
 		{
@@ -98,7 +98,7 @@ class JobApplicationController extends Controller
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		 $this->performAjaxValidation($model);
 
 		if(isset($_POST['JobApplication']))
 		{

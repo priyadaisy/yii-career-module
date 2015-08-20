@@ -37,6 +37,7 @@ class JobApplication extends CActiveRecord {
             array('job_id, name, email, mobile, description', 'required'),
             array('email', 'email'),
             array('mobile', 'numerical', 'integerOnly' => true),
+            array('url_resume, url_github, url_behance', 'url'),
             array('name, email', 'length', 'max' => 50),
             array('url_github, url_behance', 'length', 'max' => 100),
             array('resume_path', 'file', 'allowEmpty'=>true, 'types'=>'doc, docx, pdf', 'maxSize'=>'2097152', 'safe' => false),

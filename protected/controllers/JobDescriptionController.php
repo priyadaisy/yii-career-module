@@ -61,7 +61,7 @@ class JobDescriptionController extends Controller {
         $model = new JobDescription;
 
         // Uncomment the following line if AJAX validation is needed
-        // $this->performAjaxValidation($model);
+         $this->performAjaxValidation($model);
 
         if (isset($_POST['JobDescription'])) {
             $model->attributes = $_POST['JobDescription'];
@@ -91,7 +91,7 @@ class JobDescriptionController extends Controller {
         $model = $this->loadModel($id);
 
         // Uncomment the following line if AJAX validation is needed
-        // $this->performAjaxValidation($model);
+         $this->performAjaxValidation($model);
 
         if (isset($_POST['JobDescription'])) {
             $model->attributes = $_POST['JobDescription'];
@@ -133,9 +133,10 @@ class JobDescriptionController extends Controller {
         $criteria = new CDbCriteria();
         $criteria->addCondition("job_id=:job_id");
         $criteria->params = array(':job_id' => $id);
-        $applications = JobApplication::model()->findAll($criteria);
-        $applications = new CArrayDataProvider($applications);
-
+        $applications = new CActiveDataProvider('JobApplication', array(
+            'criteria'=>$criteria,
+        ));
+        
         $this->render('view_applications', array(
             'model' => $this->loadModel($id),
             'applications' => $applications,
@@ -146,7 +147,11 @@ class JobDescriptionController extends Controller {
      * Lists all models.
      */
     public function actionIndex() {
-        $dataProvider = new CActiveDataProvider('JobDescription');
+        $dataProvider = new CActiveDataProvider('JobDescription', array(
+            'criteria'=>array(
+                'condition'=>'status=1',
+            ),
+        ));
         $this->render('index', array(
             'dataProvider' => $dataProvider,
         ));
