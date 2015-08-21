@@ -63,7 +63,15 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 //		'job_description_details',
 //		'status',
 		array(
-			'class'=>'CButtonColumn',
-		),
+                    'class' => 'CButtonColumn',
+                    'template' => '{view}{update}{delete}{viewapplications}',
+                    'buttons' => array(
+                        'viewapplications' => array(
+                            'url' => '$this->grid->controller->createUrl("/jobdescription/viewapplications", array("id"=>$data->id))',
+                            'label' => 'va',
+                            'options'=>array('title'=>'View Applications'),
+                        ),
+                    ),
+                ),
 	),
 )); ?>

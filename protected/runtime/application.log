@@ -1295,3 +1295,11 @@ Stack trace:
 REQUEST_URI=/career_app/index.php?r=jobDescription/viewapplications&id=10
 in C:\xampp\htdocs\career_app\protected\controllers\JobDescriptionController.php (137)
 in C:\xampp\htdocs\career_app\index.php (13)
+2015/08/21 07:03:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "jobdescriptions".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('jobdescriptions')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\career_app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/career_app/?r=jobdescriptions
+---
