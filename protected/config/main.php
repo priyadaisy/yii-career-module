@@ -2,8 +2,10 @@
 
 // uncomment the following to define a path alias
 // Yii::setPathOfAlias('local','path/to/local-folder');
+Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
+
 Yii::app()->params['JOB_KIND'] = array(
-	'full-time-employment' => 'Full-time employment',
+    'full-time-employment' => 'Full-time employment',
     'short-term-contract' => 'Short-term contract',
     'internship' => 'Internship',
     'freelance-or-consulting' => 'Freelance or consulting',
@@ -12,16 +14,17 @@ Yii::app()->params['JOB_KIND'] = array(
 );
 
 Yii::app()->params['JOB_CATEGORY'] = array(
-	'programming' => 'Programming',
-    'interaction-design' => 'Interaction Design',
-    'graphic-design' => 'Graphic Design',
-    'testing' => 'Testing',
+    'coder' => 'Coder',
+    'interaction-designer' => 'Interaction Designer',
+    'graphic-designer' => 'Graphic Designer',
+    'ui-ux' => 'UI UX Guy',
+    'qa-engineer' => 'Qa Engineer',
     'system-administration' => 'System Administration',
-    'business-management' => 'Business/Management',
+    'business-management' => 'Marketing / Biz. Dev',
     'writer-editor' => 'Writer/Editor',
     'customer-support' => 'Customer Support',
     'mobile' => 'Mobile (iPhone, Android, other)',
-    'office-administration' => 'Office Administration',
+    'office-administrator' => 'Office Administrator',
 );
 
 // This is the main Web application configuration. Any writable
@@ -39,36 +42,44 @@ return array(
 		'application.components.*',
 	),
 
+        'theme'=>'bootstrap', // requires you to copy the theme under your themes directory
+    
 	'modules'=>array(
-		// uncomment the following to enable the Gii tool
-		
-		'gii'=>array(
-			'class'=>'system.gii.GiiModule',
-			'password'=>'putforshare',
-			// If removed, Gii defaults to localhost only. Edit carefully to taste.
-			'ipFilters'=>array('127.0.0.1','::1'),
-		),
-		
-	),
+        // uncomment the following to enable the Gii tool
+
+        'gii' => array(
+            'class' => 'system.gii.GiiModule',
+            'password' => 'putforshare',
+            // If removed, Gii defaults to localhost only. Edit carefully to taste.
+            'ipFilters' => array('127.0.0.1', '::1'),
+            'generatorPaths' => array(
+                'bootstrap.gii',
+            ),
+        ),
+    ),
 
 	// application components
 	'components'=>array(
+            
+             'bootstrap'=>array(
+                'class'=>'bootstrap.components.Bootstrap',
+             ),
 
 		'clientScript'=>array(
-        	// 'coreScriptPosition'=>CClientScript::POS_END,
-	        'scriptMap'=>array(
-                    'ckeditor.js' => '//cdn.ckeditor.com/4.5.2/basic/ckeditor.js',
-                    'jquery.js' => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
-                    'jquery-ui.min.js' => '//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js',
-                    'jquery-ui.css' => '//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css',
-                    'bootstrap.min.js' => '//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js',
+            // 'coreScriptPosition'=>CClientScript::POS_END,
+            'scriptMap' => array(
+                'ckeditor.js' => '//cdn.ckeditor.com/4.5.2/basic/ckeditor.js',
+                'jquery.js' => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
+                'jquery-ui.min.js' => '//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js',
+                'jquery-ui.css' => '//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css',
+                'bootstrap.min.js' => '//netdna.bootstrapcdn.com/bootstrap/2.2.2/js/bootstrap.min.js',
             ),
-    	),
+        ),
 
 		'user'=>array(
-			// enable cookie-based authentication
-			'allowAutoLogin'=>true,
-		),
+            // enable cookie-based authentication
+            'allowAutoLogin' => true,
+        ),
 
 		// uncomment the following to enable URLs in path-format
 		/*
@@ -85,35 +96,35 @@ return array(
 		// database settings are configured in database.php
 		// 'db'=>require(dirname(__FILE__).'/database.php'),
 
-		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=grand_app_career',
-			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
-			'charset' => 'utf8',
-			'tablePrefix' => '',
-		),
+	'db'=>array(
+            'connectionString' => 'mysql:host=localhost;dbname=grand_app_career',
+            'emulatePrepare' => true,
+            'username' => 'root',
+            'password' => '',
+            'charset' => 'utf8',
+            'tablePrefix' => '',
+        ),
 
-		'errorHandler'=>array(
-			// use 'site/error' action to display errors
-			'errorAction'=>'site/error',
-		),
+	'errorHandler'=>array(
+            // use 'site/error' action to display errors
+            'errorAction' => 'site/error',
+        ),
 
-		'log'=>array(
-			'class'=>'CLogRouter',
-			'routes'=>array(
-				array(
-					'class'=>'CFileLogRoute',
-					'levels'=>'error, warning',
-				),
-				// uncomment the following to show log messages on web pages
-				/*
-				array(
-					'class'=>'CWebLogRoute',
-				),
-				*/
-			),
-		),
+        'log'=>array(
+            'class' => 'CLogRouter',
+            'routes' => array(
+                array(
+                    'class' => 'CFileLogRoute',
+                    'levels' => 'error, warning',
+                ),
+            // uncomment the following to show log messages on web pages
+            /*
+              array(
+              'class'=>'CWebLogRoute',
+              ),
+             */
+            ),
+        ),
 
 	),
 
