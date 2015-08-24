@@ -216,6 +216,11 @@ input[type="file"].book-image-upload {
     color: #3CB51E;
 }
 
+.pagination {
+    clear: both;
+    text-align: center;
+}
+
 /************************************* Browse all Item, My Offerings, My Wishlist ********************/
 .book-item-list {
     list-style-type: none;

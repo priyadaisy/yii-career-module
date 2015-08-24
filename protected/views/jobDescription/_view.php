@@ -6,7 +6,7 @@
 <div class="view span4 job-item">
     
     <h3 class="job-title pull-left">
-        <?php echo CHtml::link(CHtml::encode($data->job_title), array('view', 'id'=>$data->id)); ?>
+        <?php echo CHtml::link(CHtml::encode($data->job_title), array('jobApplication/create', 'job_id'=>$data->id)); ?>
     </h3>
     
     <div class="pull-right">
@@ -28,5 +28,5 @@
 
     <span class="date"><?php echo CHtml::encode(date("j F Y", strtotime($data->created_on))); ?></span>
     
-    <?php echo CHtml::link('view', array('view', 'id'=>$data->id), array('class' => 'btn btn-primary pull-right')); ?>
+    <?php echo CHtml::link('view', array('jobApplication/create', 'job_id'=>$data->id), array('class' => 'btn btn-primary pull-right')); ?>
 </div>
