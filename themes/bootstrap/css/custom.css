@@ -1,0 +1,473 @@
+body {
+    background: url("bg_body.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    font-family: "Roboto";
+    font-size: 11px;
+}
+
+h1,h3{
+    color:#990099;
+    text-transform: capitalize;
+}
+
+a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: #092FEF;
+}
+
+.navbar .brand {
+    font-family:"Nova Square";
+    font-size: 36px;
+    color:#990099;
+    padding: 10px 0;
+    text-transform: none;
+}
+
+.navbar .brand span {
+    color: #0000FF;
+    font-size: 12px;
+    vertical-align: super;
+    margin-left: -5px;
+}
+
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+    background: none;
+    box-shadow: none;
+    color: #990099;
+    text-transform: uppercase;
+}
+
+.navbar-fixed-top .container {
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+.navbar-fixed-top .navbar-inner .container{
+    padding: 10px 0px;
+}
+
+.basic-container {
+    background-color: #FFFFFF;
+    min-height: 400px;
+    padding: 10px;
+}
+
+.basic-container p {
+    font-size: 1.5em;
+}
+
+.basic-container .help-block {
+    margin-top: 10px;
+}
+.basic-alert {
+    width: 40%;
+    margin: 30px auto 0px;
+}
+
+.navbar-inner{
+    background: url("bg_body.gif");
+    height: auto;
+}
+
+.navbar-inner .container li {
+    text-align: center;
+}
+
+.navbar .nav > li > a {
+    padding: 10px 10px;
+}
+
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+    color: #990099;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.navbar .nav > li > a.start-using {
+    color: #FFFFFF;
+    background-color: #990099;
+    background-image: none;	
+    text-shadow: none;
+    padding: 5px 15px;
+    text-transform: capitalize;;
+}
+
+.navbar .nav > li > a.start-using:focus,
+.navbar .nav > li > a.start-using:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #990099;
+}
+
+.nav-center {  
+    text-align: center;
+}
+.nav-center ul.nav {
+    display: inline-block;
+}
+.nav-center li {
+    display: inline;
+}
+.nav-center a {
+    float: left;
+}
+
+#secondary-menu{
+    border-bottom: 0px;
+    margin-bottom: -7px;
+}
+
+#secondary-menu.nav {
+    margin-top: 20px;
+}
+
+#secondary-menu.nav {
+    margin-top: 0px;
+}
+
+#secondary-menu li{
+    margin: 0px 2px;
+}
+
+
+
+.page-heading {
+    margin-left: 5%;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+.h-center {
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.home-content-row {
+    padding: 10px 0px;
+}
+
+.home-content-row img {
+    margin-top: 20px;
+}
+
+.home-content-row p {
+    font-size: 1.4em;
+}
+
+.required-star {
+    color: red;
+}
+
+.inner-para {
+    margin-left: 5%;
+}
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    height: 22px;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+select, input[type="file"] {
+    height: 32px;
+    line-height: 32px;
+}
+
+input[type="file"].book-image-upload {
+    height: 0px;
+    width: 0px;
+}
+
+.btn {
+    line-height: 22px;
+}
+
+.btn-primary {
+    color: #FFFFFF;
+    background-color: #990099;
+    background-image: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    color: #FFFFFF;
+    background-color: #990099;
+    text-decoration: none;
+}
+
+.book-image-upload-wrapper {
+    margin-left: 0px;
+}
+
+.book-image-upload-wrapper input {
+    width: calc(97% - 39px);
+}
+
+.heart-message {
+    text-align: center;
+}
+
+.heart-message .fa-heart {
+    font-size: 6em;
+    color: #3CB51E;
+}
+
+.pagination {
+    clear: both;
+    text-align: center;
+}
+
+/************************************* Browse all Item, My Offerings, My Wishlist ********************/
+.book-item-list {
+    list-style-type: none;
+    margin-left: 0px;
+    padding: 15px;
+    padding-top: 10px;
+}
+
+.book-item {
+    background-color: #F1F1F1;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.book-item p {
+    font-size: 1em;
+}
+
+.book-item .heading {
+    margin-bottom: 10px;
+}
+
+.book-item .heading-title {
+    margin: 0px;
+    color: #0086CB;
+    font-weight: bold;
+    width: 70%;
+}
+
+.book-item .full {
+    width: 100%;
+}
+
+.book-item .book-image {
+    margin: 0px 15px 10px 0px;	
+}
+
+.book-item .no-image {
+    height: 168px;
+    width: 128px;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-item .quality {
+    margin-bottom: 0px;
+    display: inline;
+}
+
+.book-item .fa-check-circle-o {
+    color: #20BC0F;
+}
+
+.book-item .fa-ban {
+    color: red;
+}
+
+.book-item .availability {
+    color: #20BC0F;
+    text-transform: uppercase;
+    padding: 4px;
+    font-size: 10px;
+}
+
+.book-item .not {
+    color: red;
+}
+
+.book-item .user-name {
+    color: #0086CB;
+}
+
+.book-item .want-this-button {
+    color: #FFFFFF;
+    background-color: #990099;
+    background-image: none;
+}
+
+.book-item .pickup-location {
+    margin-top: 10px;
+}
+
+.book-item .pickup-location-heading {
+    margin-bottom: 0px;
+    display: inline;
+}
+
+.book-item .pickup-location-list {
+    margin-bottom: 5px;
+    list-style-type: none;
+    display: inline;
+    margin-left: 0px;
+}
+
+.book-item .pickup-location-list li {
+    display: inline;
+}
+
+.book-item .thin-line {
+    border-color: #d0d0d0;
+    margin: 10px -15px;
+}
+
+/*********************************** Browse all Item, My Offerings, My Wishlist Ends *******************/
+
+/*********************************** Jobs Item STARTS *******************/
+.job-item {
+    background-color: #FFFFFF;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    border-radius: 0.5em;
+}
+
+.job-item .job-title {
+    margin-top: 0px;
+}
+
+.job-item .job-title a {
+    color: #909;
+}
+    
+.job-item .job-title a:hover {
+    color: #ed1cbc;
+}
+    
+.job-item .job_kind,
+.job-item .job_category {
+    margin: 0px;
+    text-align: right;
+}
+
+.job-item .date {
+    position: relative;
+    bottom: -1.1em;
+}
+
+
+/*********************************** Jobs Item ENDS *******************/
+
+
+
+/***********************************Media Queries Starts************************/
+
+@media screen and (max-width: 580px) {
+    /*small logo for mobile device*/
+    .navbar .brand {
+        font-size: 1.5em;
+        padding-left: 30px;
+    }
+
+    /*hide whatever tag want to hide in mobile resolution*/
+    .hide-mobile {
+        display: none;
+    }
+
+    /*increase the font size in icon in mobile screen*/
+    #secondary-menu .fa {
+        font-size: 2.3em;
+    }
+
+    .basic-alert {
+        width: 80%;
+    }
+
+    .home-slider {
+        margin-left: -18px !important;
+    }
+}
+
+@media (min-width: 581px) and (max-width: 767px) {
+    /*change the brand logo in HD Mobile*/
+    .navbar .brand {
+        font-size: 1.8em;
+        margin-left: 30%;
+    }
+
+    .basic-alert {
+        width: 80%;
+    }
+
+    .home-slider {
+        margin-left: -18px !important;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+    /*change the brand logo according to tablate*/
+    .navbar .brand {
+        font-size: 1.8em;
+        margin-left: 35%;
+    }
+
+    /*change the width of book list item*/
+    .book-item {
+        width: 42%;
+    }
+
+    .basic-alert {
+        width: 60%;
+    }
+    
+    .job-item {
+        width: 42%;
+    }
+    
+}
+
+@media (min-width: 980px) and (max-width: 1199px) {
+
+    /*change the width of book list item*/
+    .book-item {
+        width: 27%;
+    }
+
+    /*change the brand logo according to laptops*/
+    .navbar .brand {
+        font-size: 1.8em;
+    }
+
+    .center-form {
+        width: 80%;
+        margin-left: 10%;
+    }
+    
+    .job-item {
+        width: 27%;
+    }
+}
+
+@media (min-width: 1200px) {
+    /*change the width of book list item*/
+    .book-item {
+        width: 27%;
+    }
+
+    .center-form {
+        width: 80%;
+        margin-left: 10%;
+    }
+    
+    .job-item {
+        width: 27%;
+    }
+}
+
+/***********************************Media Queries Ends************************/
