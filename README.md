@@ -1,7 +1,4 @@
-# yii-career-module
-Ready to use Career Module for Your Yii Based Website or Web application
-
-# Career Module for Your Yii Based Website or Web application
+# Career Module for Your **Yii 1.1** Based Website or Web application
 Ready to use Career Module for Your Yii Based Website or Web application
 
 This career module is ready to use career page for your yii based website.
