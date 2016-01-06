@@ -5,14 +5,23 @@ This career module is ready to use career page for your yii based website.
 
 Following are the list of features
 
-1. Admin can create Job Description (Opportunities)
-
-#### Login As Admin
+###### Login As Admin
 ![Login As Admin](screens/admin.png)
 
-2. These Opportunities are viewed for Guest Users without login.
-3. Candidates can apply for these opportunities
-4. Admin would be able to view list of candidates applied for a particular job position.
+###### Create Job Descriptions or Opportunities
+![Create Job Opportunities / Job Descriptions](screens/createjob.png)
+
+###### These Opportunities are viewed for Guest Users without login.
+![Job Description list](screens/job-description-list.png)
+
+###### Candidates can apply for these opportunities
+![Candidates Apply Screen](screen/)
+
+###### Admin can Manage Job Descriptions Created
+![Manage Job Descriptions](screen/view-applicants.png)
+
+###### Admin would be able to view list of candidates applied for a particular job position.
+![View Job Applicants](screen/manage-job-descriptions.png)
 
 The database schema can be found inside `sql` folder :`xyz_career.sql`
 
