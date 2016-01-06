@@ -11,17 +11,17 @@ Following are the list of features
 ###### Create Job Descriptions or Opportunities
 ![Create Job Opportunities / Job Descriptions](screens/createjob.png)
 
-###### These Opportunities are viewed for Guest Users without login.
+###### These Opportunities can be viewed by Guest Users without login.
 ![Job Description list](screens/job-description-list.png)
 
 ###### Candidates can apply for these opportunities
-![Candidates Apply Screen](screen/)
+![Candidates Apply Screen](screens/)
 
 ###### Admin can Manage Job Descriptions Created
-![Manage Job Descriptions](screen/view-applicants.png)
+![Manage Job Descriptions](screens/manage-job-descriptions.png)
 
 ###### Admin would be able to view list of candidates applied for a particular job position.
-![View Job Applicants](screen/manage-job-descriptions.png)
+![View Job Applicants](screens/view-applicants.png)
 
 The database schema can be found inside `sql` folder :`xyz_career.sql`
 
