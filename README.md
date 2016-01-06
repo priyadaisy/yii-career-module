@@ -15,7 +15,7 @@ Following are the list of features
 ![Job Description list](screens/job-description-list.png)
 
 ###### Candidates can apply for these opportunities
-![Candidates Apply Screen](screens/)
+![Candidates Apply Screen](screens/aplyopr.png)
 
 ###### Admin can Manage Job Descriptions Created
 ![Manage Job Descriptions](screens/manage-job-descriptions.png)
