@@ -1,0 +1,16 @@
+{
+    "name": "napoleon/yii-career-module",
+    "description": "Career Module for yii based websites",
+    "type": "project",
+    "license": "Copyright reserved",
+    "authors": [
+        {
+            "name": "Napoleon Arouldas",
+            "email": "meetneps@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "sendgrid/sendgrid": "~4.0"
+    }
+}
