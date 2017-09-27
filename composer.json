@@ -11,6 +11,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
+        "knplabs/github-api": "^2.5@dev",        
         "sendgrid/sendgrid": "~4.0"
     }
 }
