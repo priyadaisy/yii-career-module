@@ -10,7 +10,7 @@ defined('YII_DEBUG') or define('YII_DEBUG',true);
 defined('YII_TRACE_LEVEL') or define('YII_TRACE_LEVEL',3);
 
 // Create Asset and runtime folder if not created
-if (!file_exists('protected/runtime')) {
+iffffff (!file_exists('protected/runtime')) {
     mkdir('protected/runtime',0777);
 }
 
@@ -19,5 +19,5 @@ if (!file_exists('assets')) {
 }
 
 
-require_once($yii);
+require_once($yii)
 Yii::createWebApplication($config)->run();
