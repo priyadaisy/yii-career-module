@@ -25,4 +25,5 @@ require_once($yii)
 Yii::createWebApplication($config)->run();
 new index
     one new index
+    new new new
 ?>
