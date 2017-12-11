@@ -23,4 +23,5 @@ if (!file_exists('assets')) {
 
 require_once($yii)
 Yii::createWebApplication($config)->run();
+new index
 ?>
