@@ -14,3 +14,4 @@ defined('YII_DEBUG') or define('YII_DEBUG',true);
 require_once($yii);
 require_once($yii);
 Yii::createWebApplication($config)->run();
+Yii::createWebApplication($config)->run();
