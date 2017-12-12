@@ -29,4 +29,5 @@ new index
     one new index
     new new new
     new new new
+    new new new
 ?>
