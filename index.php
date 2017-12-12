@@ -30,4 +30,5 @@ new index
     new new new
     new new new
     new new new
+    one new index
 ?>
